@@ -36,7 +36,35 @@ https://api.gotokeep.com/kprime/v2/auth
 ```
 
 ## 如何使用
-### 我学习使用到的工具 [whistle](https://github.com/avwo/whistle) 
+### 方式一：不用电脑 平板/手机 使用 [network_proxy_flutter](https://github.com/wanghongenpin/network_proxy_flutter/)
+```
+# 根据软件教程安装HTTPS代理
+# 请求重写，添加URLs
+https://kit.gotokeep.com/*
+https://api.gotokeep.com/*
+
+# 修改响应 添加这15条 （上面两个链接都把这些替换写进去）
+# 左边为原内容 :冒号为分隔符 右边为替换内容
+"userMemberStatus":false : "userMemberStatus":true
+"userLiveMemberStatus":false : "userLiveMemberStatus":true
+"userIdentityType":5 : "userIdentityType":1
+"willExpireDays":0 : "willExpireDays":3660
+"canWatchLive":false : "canWatchLive":true
+"userLiveMemberExpireTime":0 : "userLiveMemberExpireTime":1776630399000
+"normalMember":false : "normalMember":true
+"liveMember":false : "liveMember":true
+"hasLiveMembership":false : "hasLiveMembership":true
+"hasPaid":false : "hasPaid":true
+"canPractiseScreenshotAndRecording":false : "canPractiseScreenshotAndRecording":true
+"status":false : "status":true
+"memberStatus":"never" : "memberStatus":"member"
+"status":3 : "status":1
+"statusTrack":"expired" : "statusTrack":"valid"
+```
+
+
+
+### 方式二：电脑调试学习使用到的工具 [whistle](https://github.com/avwo/whistle) 
 ### 其他工具也可以，目的能替换就行了
 ```
 Rules 规则
