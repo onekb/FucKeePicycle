@@ -13,7 +13,7 @@ https://kit.gotokeep.com/*
 
 ## 相应内容做以下替换
 ```
-详情读取json文件
+请求重写里导入json文件
 ```
 
 ## 如何使用
